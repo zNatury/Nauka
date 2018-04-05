@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nauka.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,10 @@ namespace Nauka.Controllers
     {
         public ActionResult Index()
         {
+            var contacts = new List<Contact> { new Contact { Name = "Jakub", Surname = "Lipka", City = "Warszawa", Street = "Morro" },
+                new Contact{ Name = "Wioletta", Surname = "WIlczek", City = "Warszawa", Street = "Anielewicza"},
+                new Contact{ Name = "Marek", Surname = "Szewczyk", City = "Warszawa", Street = "Bryły"}
+            };
             return View();
         }
 

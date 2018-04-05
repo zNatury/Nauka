@@ -13,8 +13,13 @@ namespace Nauka.Controllers
         {
             var contacts = new List<Contact> { new Contact { Name = "Jakub", Surname = "Lipka", City = "Warszawa", Street = "Morro" },
                 new Contact{ Name = "Wioletta", Surname = "WIlczek", City = "Warszawa", Street = "Anielewicza"},
-                new Contact{ Name = "Marek", Surname = "Szewczyk", City = "Warszawa", Street = "Bryły"}
+                new Contact{ Name = "Marek", Surname = "Szewczyk", City = "Warszawa", Street = "Bryły"}        
             };
+            string path = @"C:\Users\jakub.lipka\Pictures\Memory\";
+            var pictures = new List<Picture> { new Picture { name = "Doda", sourcePath = @"doda.png" },
+            new Picture { name = "Kuba", sourcePath = "kuba.png" } };            
+            ViewBag.Pictures = pictures;
+
             return View();
         }
 
